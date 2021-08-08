@@ -1,9 +1,12 @@
 void main(List<String> arguments) {
+  //
+  //? i used var to test the blue line error
+  //! why blue and why var to fix it?
   StudentsMarks std1 = StudentsMarks(name: 'Mohammad', marks: 49);
   StudentsMarks std2 = StudentsMarks(name: 'Snow', marks: 55);
   StudentsMarks std3 = StudentsMarks(name: 'Sara', marks: 78);
-  StudentsMarks std4 = StudentsMarks(name: 'Noor', marks: 98);
-  StudentsMarks std5 = StudentsMarks(name: 'Khaled', marks: 200);
+  var std4 = StudentsMarks(name: 'Noor', marks: 98);
+  var std5 = StudentsMarks(name: 'Khaled', marks: 200);
 
   print(std1.grades());
   print('-------------------');
@@ -19,15 +22,11 @@ void main(List<String> arguments) {
 
 class StudentsMarks {
   String? name;
-  int? id;
   double? marks;
 
-  StudentsMarks({
-    required this.name,
-    required this.marks,
-  });
+  StudentsMarks({required this.name, required this.marks});
 
-  //! ask Abo yousif about (return and print command if we put String or without)
+  //! why we can't use marks in if instead of grd(it says error and can be null)
   String grades() {
     double grd;
     grd = marks!;

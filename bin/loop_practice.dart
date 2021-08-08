@@ -1,6 +1,7 @@
 void main(List<String> args) {
   //
-  var info = [
+
+  List info = [
     {
       'name': 'Mohammad',
       'age': 20,
@@ -20,16 +21,15 @@ void main(List<String> args) {
     },
   ];
 
-  for (var i = 0; i < info.length; i++) {
-    print(info[i]['children']);
-  }
-
-  //
   // for (var i = 0; i < info.length; i++) {
-  //   print(info[i]['name']);
-  //   for (var j = 0; j < info[i]['children']; j++) {
-  //     print(info[i]['children'][j]);
-  //   }
-  //   print('-----------------------');
+  //   print(info[i]['children']);
   // }
+
+  for (var i = 0; i < info.length; i++) {
+    print(info[i]['name'] + ', the children are:');
+    for (var j = 0; j < info[i]['children'].length; j++) {
+      print(info[i]['children'][j]);
+    }
+    print('-----------------------');
+  }
 }
