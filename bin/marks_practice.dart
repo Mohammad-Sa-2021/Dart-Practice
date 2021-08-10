@@ -3,8 +3,8 @@ void main(List<String> arguments) {
   //? i used var to test the blue line error
   //! why blue and why var to fix it?
   StudentsMarks std1 = StudentsMarks(name: 'Mohammad', marks: 49);
-  StudentsMarks std2 = StudentsMarks(name: 'Snow', marks: 55);
-  StudentsMarks std3 = StudentsMarks(name: 'Sara', marks: 78);
+  var std2 = StudentsMarks(name: 'Snow', marks: 55);
+  var std3 = StudentsMarks(name: 'Sara', marks: 78);
   var std4 = StudentsMarks(name: 'Noor', marks: 98);
   var std5 = StudentsMarks(name: 'Khaled', marks: 200);
 
